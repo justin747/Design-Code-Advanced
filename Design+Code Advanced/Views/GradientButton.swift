@@ -9,6 +9,8 @@ import SwiftUI
 
 struct GradientButton: View {
     
+    @State private var angle = 0.0
+    
     var gradient1: [Color] = [
         Color.init(red: 101/255, green: 134/255, blue: 1),
         Color.init(red: 1, green: 64/255, blue: 80/255),
@@ -32,6 +34,11 @@ struct GradientButton: View {
                                 .frame(maxWidth: geometry.size.width - 16)
                                 .blur(radius: 8.0)
                         )
+                        .onAppear() {
+                            withAnimation(.linear(duration: 7.0)) {
+                                self.angle += 350
+                            }
+                        }
                     
                     GradientText(text: "Sign Up")
                         .font(.headline)

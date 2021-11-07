@@ -44,9 +44,11 @@ struct ContentView: View {
                         
                         TextFieldIcon(iconName: "envelope.open.fill", currentlyEditing: $editingEmailText)
                         TextField("Email", text: $email)
+                            .scaleEffect(emailIconBounce ? 1.2 : 1.0)
                             .onTapGesture {
                                 editingPasswordText = false
                                 editingEmailText = true
+                                generator.selectionChanged()
                             }
                         .colorScheme(.dark)
                         .foregroundColor(Color.white.opacity(0.7))
@@ -69,6 +71,7 @@ struct ContentView: View {
                             .onTapGesture {
                                 editingPasswordText = true
                                 editingEmailText = false
+                                generator.selectionChanged()
                             }
                             .colorScheme(.dark)
                             .foregroundColor(Color.white.opacity(0.7))
@@ -117,7 +120,7 @@ struct ContentView: View {
                     .stroke(Color.white.opacity(0.2))
                     .background(Color("secondaryBackground").opacity(0.5))
                     .background(VisualEffectBlur(blurStyle: .systemThinMaterialDark))
-                    .shadow(color: Color("shadowCOlor").opacity(0.5), radius: 60, x: 0, y: 30)
+                    .shadow(color: Color("shadowColor").opacity(0.5), radius: 60, x: 0, y: 30)
                 
             )
             .cornerRadius(30)
