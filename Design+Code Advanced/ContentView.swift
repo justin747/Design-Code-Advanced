@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import AudioToolbox
 
 struct ContentView: View {
     
@@ -13,7 +14,11 @@ struct ContentView: View {
     @State private var password: String = ""
     @State private var editingEmailText: Bool = false
     @State private var editingPasswordText: Bool = false
-
+    @State private var emailIconBounce: Bool = false
+    @State private var passwordIconBounce: Bool = false
+    
+    private let generator = UISelectionFeedbackGenerator()
+    
     
     var body: some View {
         
@@ -38,19 +43,20 @@ struct ContentView: View {
                     HStack(spacing: 12.0) {
                         
                         TextFieldIcon(iconName: "envelope.open.fill", currentlyEditing: $editingEmailText)
-                        TextField("Email", text: $email) { isEditing in
-                            editingEmailText = isEditing
-                            editingPasswordText = false
-                        }
-                            .colorScheme(.dark)
-                            .foregroundColor(Color.white.opacity(0.7))
-                            .autocapitalization(.none)
-                            .textContentType(.emailAddress)
-                            .disableAutocorrection(true)
+                        TextField("Email", text: $email)
+                            .onTapGesture {
+                                editingPasswordText = false
+                                editingEmailText = true
+                            }
+                        .colorScheme(.dark)
+                        .foregroundColor(Color.white.opacity(0.7))
+                        .autocapitalization(.none)
+                        .textContentType(.emailAddress)
+                        .disableAutocorrection(true)
                     }
                     .frame(height: 52)
                     .overlay(
-                    
+                        
                         RoundedRectangle(cornerRadius: 16)
                             .stroke(Color.white, lineWidth: 1.0)
                             .blendMode(.overlay))
@@ -58,23 +64,27 @@ struct ContentView: View {
                     
                     HStack(spacing: 12.0) {
                         
-                   TextFieldIcon(iconName: "key.fill", currentlyEditing: $editingPasswordText)
+                        TextFieldIcon(iconName: "key.fill", currentlyEditing: $editingPasswordText)
                         SecureField("Password", text: $password)
+                            .onTapGesture {
+                                editingPasswordText = true
+                                editingEmailText = false
+                            }
                             .colorScheme(.dark)
                             .foregroundColor(Color.white.opacity(0.7))
                             .autocapitalization(.none)
                             .textContentType(.password)
+                        
                     }
                     .frame(height: 52)
+                    
                     .overlay(
                         RoundedRectangle(cornerRadius: 16)
                             .stroke(Color.white, lineWidth: 1.0)
                             .blendMode(.overlay))
                     .background(Color("secondaryBackground").cornerRadius(16.0).opacity(0.8))
-                    .onTapGesture {
-                        editingPasswordText = true
-                        editingEmailText = false
-                    }
+                    
+                    
                     
                     GradientButton()
                     
@@ -95,7 +105,7 @@ struct ContentView: View {
                                     .foregroundColor(Color.white.opacity(0.7))
                                 GradientText(text: "Sign In")
                                     .font(Font.footnote.bold())
-
+                                
                             }
                         })
                     })
@@ -103,11 +113,11 @@ struct ContentView: View {
                 .padding(20)
             }
             .background(
-            RoundedRectangle(cornerRadius: 30)
-                .stroke(Color.white.opacity(0.2))
-                .background(Color("secondaryBackground").opacity(0.5))
-                .background(VisualEffectBlur(blurStyle: .systemThinMaterialDark))
-                .shadow(color: Color("shadowCOlor").opacity(0.5), radius: 60, x: 0, y: 30)
+                RoundedRectangle(cornerRadius: 30)
+                    .stroke(Color.white.opacity(0.2))
+                    .background(Color("secondaryBackground").opacity(0.5))
+                    .background(VisualEffectBlur(blurStyle: .systemThinMaterialDark))
+                    .shadow(color: Color("shadowCOlor").opacity(0.5), radius: 60, x: 0, y: 30)
                 
             )
             .cornerRadius(30)
@@ -115,13 +125,13 @@ struct ContentView: View {
         }
     }
 }
-    
-    
-    
-    struct ContentView_Previews: PreviewProvider {
-        static var previews: some View {
-            ContentView()
-        }
+
+
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
     }
+}
 
 
