@@ -33,7 +33,7 @@ struct TextFieldIcon: View {
                             .blur(radius: 10)
                             .onAppear() {
                                 withAnimation(.linear(duration: 7.0)) {
-                                    self.colorAngle += 325
+                                    self.colorAngle += 350
                                 }
                             }
                     }
