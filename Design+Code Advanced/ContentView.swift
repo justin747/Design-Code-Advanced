@@ -43,12 +43,23 @@ struct ContentView: View {
                     HStack(spacing: 12.0) {
                         
                         TextFieldIcon(iconName: "envelope.open.fill", currentlyEditing: $editingEmailText)
-                        TextField("Email", text: $email)
                             .scaleEffect(emailIconBounce ? 1.2 : 1.0)
+                        TextField("Email", text: $email)
                             .onTapGesture {
                                 editingPasswordText = false
                                 editingEmailText = true
                                 generator.selectionChanged()
+                                
+                                if editingEmailText {
+                                    withAnimation(.spring(response: 0.3, dampingFraction: 0.4, blendDuration: 0.5)) {
+                                        emailIconBounce.toggle()
+                                    }
+                                    DispatchQueue.main.asyncAfter(deadline: .now()+0.25) {
+                                        withAnimation(.spring(response: 0.3, dampingFraction: 0.4, blendDuration: 0.5)) {
+                                            emailIconBounce.toggle()
+                                        }
+                                    }
+                                }
                             }
                         .colorScheme(.dark)
                         .foregroundColor(Color.white.opacity(0.7))
@@ -67,11 +78,22 @@ struct ContentView: View {
                     HStack(spacing: 12.0) {
                         
                         TextFieldIcon(iconName: "key.fill", currentlyEditing: $editingPasswordText)
+                            .scaleEffect(passwordIconBounce ? 1.2 : 1.0)
                         SecureField("Password", text: $password)
                             .onTapGesture {
+                                generator.selectionChanged()
                                 editingPasswordText = true
                                 editingEmailText = false
-                                generator.selectionChanged()
+                                if editingPasswordText {
+                                    withAnimation(.spring(response: 0.3, dampingFraction: 0.4, blendDuration: 0.5)) {
+                                        passwordIconBounce.toggle()
+                                    }
+                                    DispatchQueue.main.asyncAfter(deadline: .now()+0.25) {
+                                        withAnimation(.spring(response: 0.3, dampingFraction: 0.4, blendDuration: 0.5)) {
+                                            passwordIconBounce.toggle()
+                                        }
+                                    }
+                                }
                             }
                             .colorScheme(.dark)
                             .foregroundColor(Color.white.opacity(0.7))
