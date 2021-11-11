@@ -18,6 +18,8 @@ struct SignupView: View {
     @State private var emailIconBounce: Bool = false
     @State private var passwordIconBounce: Bool = false
     @State private var showProfileView: Bool = false
+    @State private var signUpToggle: Bool = true
+    @State private var rotationAngle = 0.0
     
     private let generator = UISelectionFeedbackGenerator()
     
@@ -26,14 +28,14 @@ struct SignupView: View {
         
         ZStack {
             
-            Image("background-3")
+            Image(signUpToggle ? "background-3" : "background-1")
                 .resizable()
                 .aspectRatio(contentMode: .fill)
                 .edgesIgnoringSafeArea(.all)
             
             VStack {
                 VStack(alignment: .leading, spacing: 16) {
-                    Text("Sign Up")
+                    Text(signUpToggle ? "Sign Up" : "Sign In")
                         .font(Font.largeTitle.bold())
                         .foregroundColor(Color.white)
                     
@@ -113,7 +115,7 @@ struct SignupView: View {
                     
                     
                     
-                    GradientButton(buttonTitle: "Create Account") {
+                    GradientButton(buttonTitle: signUpToggle ? "Create Account" : "Sign In") {
                         generator.selectionChanged()
                         signup()
                     }
@@ -125,30 +127,51 @@ struct SignupView: View {
                         }
                     }
                     
-                    Text("By clicking on 'Sign Up', you agree to our Terms Of Services and Privacy Policy")
-                        .font(.footnote)
-                        .foregroundColor(Color.white.opacity(0.7))
-                    Rectangle()
-                        .frame(height: 1)
-                        .foregroundColor(Color.white.opacity(0.1))
+                    if signUpToggle {
+                        Text("By clicking on 'Sign Up', you agree to our Terms Of Services and Privacy Policy")
+                            .font(.footnote)
+                            .foregroundColor(Color.white.opacity(0.7))
+                        Rectangle()
+                            .frame(height: 1)
+                            .foregroundColor(Color.white.opacity(0.1))
+                    }
                     
                     VStack(alignment: .leading, spacing: 16, content: {
                         Button(action: {
-                            print("Switch to Sign Up")
+                            withAnimation(.easeInOut(duration: 0.7)) {
+                                signUpToggle.toggle()
+                                self.rotationAngle += 180
+                            }
                         }, label: {
                             HStack(spacing: 4) {
-                                Text("Already have an account?")
+                                Text(signUpToggle ? "Already have an account?" : "Don't have an account?")
                                     .font(.footnote)
                                     .foregroundColor(Color.white.opacity(0.7))
-                                GradientText(text: "Sign In")
+                                GradientText(text: signUpToggle ? "Sign In" : "Sign Up")
                                     .font(Font.footnote.bold())
                                 
                             }
                         })
+                        
+                        if !signUpToggle {
+                            Button(action: {
+                                print("Send reset password email")
+                            }, label: {
+                                HStack(spacing: 4) {
+                                    Text("Forgot Password?")
+                                        .font(.footnote)
+                                        .foregroundColor(Color.white.opacity(0.7))
+                                    GradientText(text: "Reset Password")
+                                        .font(.footnote.bold())
+                                }
+                            })
+                        }
+                        
                     })
                 }
                 .padding(20)
             }
+            .rotation3DEffect(Angle(degrees: self.rotationAngle), axis: (x: 0.0, y: 1.0, z: 0.0))
             .background(
                 RoundedRectangle(cornerRadius: 30)
                     .stroke(Color.white.opacity(0.2))
@@ -159,22 +182,38 @@ struct SignupView: View {
             )
             .cornerRadius(30)
             .padding(.horizontal)
+            .rotation3DEffect(Angle(degrees: self.rotationAngle), axis: (x: 0.0, y: 1.0, z: 0.0))
+            
             
         }
-//        .fullScreenCover(isPresented: $showProfileView) {
-//            ProfileView()
-//        }
+        //        .fullScreenCover(isPresented: $showProfileView) {
+        //            ProfileView()
+        //        }
     }
     
     func signup() {
-        Auth.auth().createUser(withEmail: email, password: password) { result, error in
-            guard error == nil else {
-                print(error!.localizedDescription)
-                return
-            }
+        
+        if signUpToggle {
             
-            print("User signed up")
+            Auth.auth().createUser(withEmail: email, password: password) { result, error in
+                guard error == nil else {
+                    print(error!.localizedDescription)
+                    return
+                }
+                
+                print("User signed up")
+            }
+        } else {
+            Auth.auth().signIn(withEmail: email, password: password) { result, error in
+                guard error == nil else {
+                    print(error!.localizedDescription)
+                    return
+                }
+                
+                print("User is signed in")
+            }
         }
+        
     }
 }
 
