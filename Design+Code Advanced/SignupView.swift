@@ -7,8 +7,9 @@
 
 import SwiftUI
 import AudioToolbox
+import FirebaseAuth
 
-struct ContentView: View {
+struct SignupView: View {
     
     @State private var email: String = ""
     @State private var password: String = ""
@@ -16,6 +17,7 @@ struct ContentView: View {
     @State private var editingPasswordText: Bool = false
     @State private var emailIconBounce: Bool = false
     @State private var passwordIconBounce: Bool = false
+    @State private var showProfileView: Bool = false
     
     private let generator = UISelectionFeedbackGenerator()
     
@@ -61,11 +63,11 @@ struct ContentView: View {
                                     }
                                 }
                             }
-                        .colorScheme(.dark)
-                        .foregroundColor(Color.white.opacity(0.7))
-                        .autocapitalization(.none)
-                        .textContentType(.emailAddress)
-                        .disableAutocorrection(true)
+                            .colorScheme(.dark)
+                            .foregroundColor(Color.white.opacity(0.7))
+                            .autocapitalization(.none)
+                            .textContentType(.emailAddress)
+                            .disableAutocorrection(true)
                     }
                     .frame(height: 52)
                     .overlay(
@@ -111,7 +113,17 @@ struct ContentView: View {
                     
                     
                     
-                    GradientButton()
+                    GradientButton(buttonTitle: "Create Account") {
+                        generator.selectionChanged()
+                        signup()
+                    }
+                    .onAppear {
+                        Auth.auth().addStateDidChangeListener { auth, user in
+                            if user != nil {
+                                showProfileView.toggle()
+                            }
+                        }
+                    }
                     
                     Text("By clicking on 'Sign Up', you agree to our Terms Of Services and Privacy Policy")
                         .font(.footnote)
@@ -147,6 +159,21 @@ struct ContentView: View {
             )
             .cornerRadius(30)
             .padding(.horizontal)
+            
+        }
+//        .fullScreenCover(isPresented: $showProfileView) {
+//            ProfileView()
+//        }
+    }
+    
+    func signup() {
+        Auth.auth().createUser(withEmail: email, password: password) { result, error in
+            guard error == nil else {
+                print(error!.localizedDescription)
+                return
+            }
+            
+            print("User signed up")
         }
     }
 }
@@ -155,7 +182,7 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        SignupView()
     }
 }
 

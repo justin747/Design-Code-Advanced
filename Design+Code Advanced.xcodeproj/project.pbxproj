@@ -11,7 +11,7 @@
 		3B14A4AA273616D800D32C64 /* GradientButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14A4A9273616D800D32C64 /* GradientButton.swift */; };
 		3B14A4AE2736176600D32C64 /* TextFieldIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14A4AD2736176600D32C64 /* TextFieldIcon.swift */; };
 		3B2BCC472735E42A004F54E4 /* Design_Code_AdvancedApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2BCC462735E42A004F54E4 /* Design_Code_AdvancedApp.swift */; };
-		3B2BCC492735E42A004F54E4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2BCC482735E42A004F54E4 /* ContentView.swift */; };
+		3B2BCC492735E42A004F54E4 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2BCC482735E42A004F54E4 /* SignupView.swift */; };
 		3B2BCC4B2735E42B004F54E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B2BCC4A2735E42B004F54E4 /* Assets.xcassets */; };
 		3B2BCC4E2735E42B004F54E4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B2BCC4D2735E42B004F54E4 /* Preview Assets.xcassets */; };
 		3B2BCC502735E42B004F54E4 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2BCC4F2735E42B004F54E4 /* Persistence.swift */; };
@@ -20,6 +20,7 @@
 		3B2BCC5D2735E60B004F54E4 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2BCC5B2735E60B004F54E4 /* ImagePicker.swift */; };
 		3B3E7A462738AD3500D99BBB /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 3B3E7A452738AD3500D99BBB /* FirebaseAuth */; };
 		3B3E7A482738ADB000D99BBB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3B3E7A472738ADB000D99BBB /* GoogleService-Info.plist */; };
+		3B8B9131273CDBFB00D512DA /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8B9130273CDBFB00D512DA /* ProfileView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,7 +29,7 @@
 		3B14A4AD2736176600D32C64 /* TextFieldIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldIcon.swift; sourceTree = "<group>"; };
 		3B2BCC432735E42A004F54E4 /* Design+Code Advanced.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Design+Code Advanced.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B2BCC462735E42A004F54E4 /* Design_Code_AdvancedApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Design_Code_AdvancedApp.swift; sourceTree = "<group>"; };
-		3B2BCC482735E42A004F54E4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		3B2BCC482735E42A004F54E4 /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
 		3B2BCC4A2735E42B004F54E4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3B2BCC4D2735E42B004F54E4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3B2BCC4F2735E42B004F54E4 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -36,6 +37,7 @@
 		3B2BCC5A2735E60B004F54E4 /* VisualEffectBlur.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisualEffectBlur.swift; sourceTree = "<group>"; };
 		3B2BCC5B2735E60B004F54E4 /* ImagePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		3B3E7A472738ADB000D99BBB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		3B8B9130273CDBFB00D512DA /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 				3B14A4A72736168D00D32C64 /* GradientText.swift */,
 				3B14A4A9273616D800D32C64 /* GradientButton.swift */,
 				3B14A4AD2736176600D32C64 /* TextFieldIcon.swift */,
+				3B8B9130273CDBFB00D512DA /* ProfileView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -82,7 +85,7 @@
 				3B14A4A62736167600D32C64 /* Views */,
 				3B2BCC592735E60B004F54E4 /* Helpers */,
 				3B2BCC462735E42A004F54E4 /* Design_Code_AdvancedApp.swift */,
-				3B2BCC482735E42A004F54E4 /* ContentView.swift */,
+				3B2BCC482735E42A004F54E4 /* SignupView.swift */,
 				3B2BCC4A2735E42B004F54E4 /* Assets.xcassets */,
 				3B2BCC4F2735E42B004F54E4 /* Persistence.swift */,
 				3B2BCC512735E42B004F54E4 /* Design_Code_Advanced.xcdatamodeld */,
@@ -188,9 +191,10 @@
 			files = (
 				3B2BCC5C2735E60B004F54E4 /* VisualEffectBlur.swift in Sources */,
 				3B14A4AA273616D800D32C64 /* GradientButton.swift in Sources */,
+				3B8B9131273CDBFB00D512DA /* ProfileView.swift in Sources */,
 				3B14A4A82736168D00D32C64 /* GradientText.swift in Sources */,
 				3B2BCC502735E42B004F54E4 /* Persistence.swift in Sources */,
-				3B2BCC492735E42A004F54E4 /* ContentView.swift in Sources */,
+				3B2BCC492735E42A004F54E4 /* SignupView.swift in Sources */,
 				3B14A4AE2736176600D32C64 /* TextFieldIcon.swift in Sources */,
 				3B2BCC5D2735E60B004F54E4 /* ImagePicker.swift in Sources */,
 				3B2BCC532735E42B004F54E4 /* Design_Code_Advanced.xcdatamodeld in Sources */,

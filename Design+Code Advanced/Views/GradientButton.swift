@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import FirebaseAuth
 
 struct GradientButton: View {
     
@@ -18,10 +19,11 @@ struct GradientButton: View {
         Color.init(red: 39/255, green: 232/255, blue: 1)
     ]
     
+    var buttonTitle: String
+    var buttonAction: () -> Void
+    
     var body: some View {
-        Button(action: {
-            print("Sign Up")
-        }, label: {
+        Button(action: buttonAction, label: {
             GeometryReader() { geometry in
                 
                 ZStack {
@@ -40,7 +42,7 @@ struct GradientButton: View {
                             }
                         }
                     
-                    GradientText(text: "Sign Up")
+                    GradientText(text: buttonTitle)
                         .font(.headline)
                         .frame(width: geometry.size.width - 16)
                         .frame(height: 50)
