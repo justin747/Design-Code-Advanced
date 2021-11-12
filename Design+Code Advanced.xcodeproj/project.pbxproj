@@ -22,6 +22,7 @@
 		3B3E7A482738ADB000D99BBB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3B3E7A472738ADB000D99BBB /* GoogleService-Info.plist */; };
 		3B8B9131273CDBFB00D512DA /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8B9130273CDBFB00D512DA /* ProfileView.swift */; };
 		3BE63916273DE68A00C7D511 /* SignInWithAppleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE63915273DE68900C7D511 /* SignInWithAppleButton.swift */; };
+		3BE63919273DFBE600C7D511 /* SignInWithAppleObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE63918273DFBE600C7D511 /* SignInWithAppleObject.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,8 @@
 		3B3E7A472738ADB000D99BBB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3B8B9130273CDBFB00D512DA /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		3BE63915273DE68900C7D511 /* SignInWithAppleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithAppleButton.swift; sourceTree = "<group>"; };
+		3BE63917273DFBBA00C7D511 /* Design+Code Advanced.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Design+Code Advanced.entitlements"; sourceTree = "<group>"; };
+		3BE63918273DFBE600C7D511 /* SignInWithAppleObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithAppleObject.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +88,7 @@
 		3B2BCC452735E42A004F54E4 /* Design+Code Advanced */ = {
 			isa = PBXGroup;
 			children = (
+				3BE63917273DFBBA00C7D511 /* Design+Code Advanced.entitlements */,
 				3B14A4A62736167600D32C64 /* Views */,
 				3B2BCC592735E60B004F54E4 /* Helpers */,
 				3B2BCC462735E42A004F54E4 /* Design_Code_AdvancedApp.swift */,
@@ -111,6 +115,7 @@
 			children = (
 				3B2BCC5A2735E60B004F54E4 /* VisualEffectBlur.swift */,
 				3B2BCC5B2735E60B004F54E4 /* ImagePicker.swift */,
+				3BE63918273DFBE600C7D511 /* SignInWithAppleObject.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -195,6 +200,7 @@
 				3B2BCC5C2735E60B004F54E4 /* VisualEffectBlur.swift in Sources */,
 				3B14A4AA273616D800D32C64 /* GradientButton.swift in Sources */,
 				3B8B9131273CDBFB00D512DA /* ProfileView.swift in Sources */,
+				3BE63919273DFBE600C7D511 /* SignInWithAppleObject.swift in Sources */,
 				3B14A4A82736168D00D32C64 /* GradientText.swift in Sources */,
 				3B2BCC502735E42B004F54E4 /* Persistence.swift in Sources */,
 				3B2BCC492735E42A004F54E4 /* SignupView.swift in Sources */,
@@ -330,6 +336,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Design+Code Advanced/Design+Code Advanced.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Design+Code Advanced/Preview Content\"";
@@ -361,6 +368,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Design+Code Advanced/Design+Code Advanced.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Design+Code Advanced/Preview Content\"";
