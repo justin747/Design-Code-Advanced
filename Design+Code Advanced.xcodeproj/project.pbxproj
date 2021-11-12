@@ -21,6 +21,7 @@
 		3B3E7A462738AD3500D99BBB /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 3B3E7A452738AD3500D99BBB /* FirebaseAuth */; };
 		3B3E7A482738ADB000D99BBB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3B3E7A472738ADB000D99BBB /* GoogleService-Info.plist */; };
 		3B8B9131273CDBFB00D512DA /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8B9130273CDBFB00D512DA /* ProfileView.swift */; };
+		3BE63916273DE68A00C7D511 /* SignInWithAppleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE63915273DE68900C7D511 /* SignInWithAppleButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		3B2BCC5B2735E60B004F54E4 /* ImagePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		3B3E7A472738ADB000D99BBB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3B8B9130273CDBFB00D512DA /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		3BE63915273DE68900C7D511 /* SignInWithAppleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithAppleButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				3B14A4A9273616D800D32C64 /* GradientButton.swift */,
 				3B14A4AD2736176600D32C64 /* TextFieldIcon.swift */,
 				3B8B9130273CDBFB00D512DA /* ProfileView.swift */,
+				3BE63915273DE68900C7D511 /* SignInWithAppleButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -197,6 +200,7 @@
 				3B2BCC492735E42A004F54E4 /* SignupView.swift in Sources */,
 				3B14A4AE2736176600D32C64 /* TextFieldIcon.swift in Sources */,
 				3B2BCC5D2735E60B004F54E4 /* ImagePicker.swift in Sources */,
+				3BE63916273DE68A00C7D511 /* SignInWithAppleButton.swift in Sources */,
 				3B2BCC532735E42B004F54E4 /* Design_Code_Advanced.xcdatamodeld in Sources */,
 				3B2BCC472735E42A004F54E4 /* Design_Code_AdvancedApp.swift in Sources */,
 			);

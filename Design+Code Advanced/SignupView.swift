@@ -138,7 +138,7 @@ struct SignupView: View {
                     
                     VStack(alignment: .leading, spacing: 16, content: {
                         Button(action: {
-                            withAnimation(.easeInOut(duration: 0.7)) {
+                            withAnimation(.easeInOut(duration: 0.3)) {
                                 signUpToggle.toggle()
                                 self.rotationAngle += 180
                             }
@@ -165,6 +165,18 @@ struct SignupView: View {
                                         .font(.footnote.bold())
                                 }
                             })
+                            
+                            Rectangle()
+                                .frame(height: 1)
+                                .foregroundColor(Color.white.opacity(0.1))
+                            
+                            Button(action: {
+                             print("Sign in with Apple")
+                            }, label: {
+                              SignInWithAppleButton()
+                                    .frame(height: 50)
+                                    .cornerRadius(16)
+                            })
                         }
                         
                     })
@@ -183,7 +195,7 @@ struct SignupView: View {
             .cornerRadius(30)
             .padding(.horizontal)
             .rotation3DEffect(Angle(degrees: self.rotationAngle), axis: (x: 0.0, y: 1.0, z: 0.0))
-            
+                    
             
         }
         //        .fullScreenCover(isPresented: $showProfileView) {
