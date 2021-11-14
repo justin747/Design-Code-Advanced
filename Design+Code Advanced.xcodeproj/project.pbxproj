@@ -169,6 +169,7 @@
 			mainGroup = 3B2BCC3A2735E429004F54E4;
 			packageReferences = (
 				3B3E7A442738AD3500D99BBB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				3BA5006327408A2F00A5F979 /* XCRemoteSwiftPackageReference "purchases-ios" */,
 			);
 			productRefGroup = 3B2BCC442735E42A004F54E4 /* Products */;
 			projectDirPath = "";
@@ -425,6 +426,14 @@
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 8.0.0;
+			};
+		};
+		3BA5006327408A2F00A5F979 /* XCRemoteSwiftPackageReference "purchases-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/RevenueCat/purchases-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
