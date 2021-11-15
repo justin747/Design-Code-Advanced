@@ -20,6 +20,7 @@
 		3B2BCC5D2735E60B004F54E4 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2BCC5B2735E60B004F54E4 /* ImagePicker.swift */; };
 		3B3E7A462738AD3500D99BBB /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 3B3E7A452738AD3500D99BBB /* FirebaseAuth */; };
 		3B3E7A482738ADB000D99BBB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3B3E7A472738ADB000D99BBB /* GoogleService-Info.plist */; };
+		3B83AEAA274207E500ABEA65 /* GradientProfilePictureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B83AEA9274207E500ABEA65 /* GradientProfilePictureView.swift */; };
 		3B8B9131273CDBFB00D512DA /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8B9130273CDBFB00D512DA /* ProfileView.swift */; };
 		3BE63916273DE68A00C7D511 /* SignInWithAppleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE63915273DE68900C7D511 /* SignInWithAppleButton.swift */; };
 		3BE63919273DFBE600C7D511 /* SignInWithAppleObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE63918273DFBE600C7D511 /* SignInWithAppleObject.swift */; };
@@ -39,6 +40,7 @@
 		3B2BCC5A2735E60B004F54E4 /* VisualEffectBlur.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisualEffectBlur.swift; sourceTree = "<group>"; };
 		3B2BCC5B2735E60B004F54E4 /* ImagePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		3B3E7A472738ADB000D99BBB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		3B83AEA9274207E500ABEA65 /* GradientProfilePictureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientProfilePictureView.swift; sourceTree = "<group>"; };
 		3B8B9130273CDBFB00D512DA /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		3BE63915273DE68900C7D511 /* SignInWithAppleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithAppleButton.swift; sourceTree = "<group>"; };
 		3BE63917273DFBBA00C7D511 /* Design+Code Advanced.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Design+Code Advanced.entitlements"; sourceTree = "<group>"; };
@@ -65,6 +67,7 @@
 				3B14A4AD2736176600D32C64 /* TextFieldIcon.swift */,
 				3B8B9130273CDBFB00D512DA /* ProfileView.swift */,
 				3BE63915273DE68900C7D511 /* SignInWithAppleButton.swift */,
+				3B83AEA9274207E500ABEA65 /* GradientProfilePictureView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -203,6 +206,7 @@
 				3BE63919273DFBE600C7D511 /* SignInWithAppleObject.swift in Sources */,
 				3B14A4A82736168D00D32C64 /* GradientText.swift in Sources */,
 				3B2BCC502735E42B004F54E4 /* Persistence.swift in Sources */,
+				3B83AEAA274207E500ABEA65 /* GradientProfilePictureView.swift in Sources */,
 				3B2BCC492735E42A004F54E4 /* SignupView.swift in Sources */,
 				3B14A4AE2736176600D32C64 /* TextFieldIcon.swift in Sources */,
 				3B2BCC5D2735E60B004F54E4 /* ImagePicker.swift in Sources */,
