@@ -6,8 +6,16 @@
 //
 
 import SwiftUI
+import FirebaseAuth
 
 struct ProfileView: View {
+    
+    @Environment(\.presentationMode) var presentationMode
+    
+    @State private var showAlertView: Bool = false
+    @State private var alertTitle: String = ""
+    @State private var alertMessage: String = ""
+    
     var body: some View {
         ZStack {
             Image("background-2")
@@ -18,16 +26,19 @@ struct ProfileView: View {
             VStack {
                 VStack(alignment: .leading, spacing: 16) {
                     HStack(spacing: 16) {
-                        ZStack {
-                            Circle()
-                                .foregroundColor(Color("pink-gradient-1"))
-                                .frame(width: 66, height: 66, alignment: .center)
-                            
-                            Image(systemName: "person.fill")
-                                .foregroundColor(Color.white)
-                                .font(.system(size: 24, weight: .medium, design: .rounded))
-                        }
-                        .frame(width: 66, height: 66, alignment: .center)
+                        //                        ZStack {
+                        //                            Circle()
+                        //                                .foregroundColor(Color("pink-gradient-1"))
+                        //                                .frame(width: 66, height: 66, alignment: .center)
+                        //
+                        //                            Image(systemName: "person.fill")
+                        //                                .foregroundColor(Color.white)
+                        //                                .font(.system(size: 24, weight: .medium, design: .rounded))
+                        //                        }
+                        //                        .frame(width: 66, height: 66, alignment: .center)
+                        
+                        GradientProfilePictureView(profilePicture: UIImage(named: "Profile")!)
+                            .frame(width: 66, height: 66)
                         
                         VStack(alignment: .leading) {
                             Text("CM Punk")
@@ -108,7 +119,7 @@ struct ProfileView: View {
             VStack {
                 Spacer()
                 Button(action: {
-                    print("Sign Out")
+                    signout()
                 }, label: {
                     Image(systemName: "arrow.turn.up.forward.iphone.fill")
                         .foregroundColor(Color.white)
@@ -122,9 +133,26 @@ struct ProfileView: View {
                 })
             }
             .padding(.bottom, 64)
+            
         }
         .colorScheme(.dark)
+        .alert(isPresented: $showAlertView) {
+            Alert(title: Text(alertTitle), message: Text(alertMessage), dismissButton: .cancel())
+        }
+        
     }
+    
+    func signout() {
+        do {
+            try Auth.auth().signOut()
+            presentationMode.wrappedValue.dismiss()
+        } catch let error {
+            alertTitle = "Uh oh"
+            alertMessage = error.localizedDescription
+            showAlertView.toggle()
+        }
+    }
+    
 }
 
 struct ProfileView_Previews: PreviewProvider {
