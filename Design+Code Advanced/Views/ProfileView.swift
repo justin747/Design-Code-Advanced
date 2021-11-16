@@ -15,6 +15,7 @@ struct ProfileView: View {
     @State private var showAlertView: Bool = false
     @State private var alertTitle: String = ""
     @State private var alertMessage: String = ""
+    @State private var showSettingsView: Bool = false
     
     var body: some View {
         ZStack {
@@ -54,7 +55,7 @@ struct ProfileView: View {
                         Spacer()
                         
                         Button(action: {
-                            print("Segue to settings")
+                            showSettingsView.toggle()
                         }, label: {
                             TextFieldIcon(iconName: "gearshape.fill", currentlyEditing: .constant(true))
                         })
