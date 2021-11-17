@@ -140,7 +140,9 @@ struct ProfileView: View {
         .alert(isPresented: $showAlertView) {
             Alert(title: Text(alertTitle), message: Text(alertMessage), dismissButton: .cancel())
         }
-        
+        .sheet(isPresented: $showSettingsView, content: {
+            SettingsView()
+        })
     }
     
     func signout() {
