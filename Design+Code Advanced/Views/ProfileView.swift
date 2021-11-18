@@ -1,8 +1,6 @@
 //
 //  ProfileView.swift
-//  Design+Code Advanced
 //
-//  Created by Justin747 on 11/10/21.
 //
 
 import SwiftUI
@@ -38,7 +36,7 @@ struct ProfileView: View {
                         //                        }
                         //                        .frame(width: 66, height: 66, alignment: .center)
                         
-                        GradientProfilePictureView(profilePicture: UIImage(named: "Profile")!)
+                        GradientProfilePictureView(profilePicture: UIImage(named: "cmpunk")!)
                             .frame(width: 66, height: 66)
                         
                         VStack(alignment: .leading) {
@@ -87,7 +85,7 @@ struct ProfileView: View {
                             .foregroundColor(Color.white.opacity(0.7))
                             .font(.system(size: 17, weight: .semibold, design: .rounded))
                         
-                        Text("designcode.io")
+                        Text("aew.com")
                             .foregroundColor(Color.white.opacity(0.7))
                             .font(.footnote)
                     }
