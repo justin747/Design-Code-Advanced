@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B005AFB27461C18000B5B82 /* GradientTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B005AFA27461C18000B5B82 /* GradientTextField.swift */; };
 		3B14A4A82736168D00D32C64 /* GradientText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14A4A72736168D00D32C64 /* GradientText.swift */; };
 		3B14A4AA273616D800D32C64 /* GradientButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14A4A9273616D800D32C64 /* GradientButton.swift */; };
 		3B14A4AE2736176600D32C64 /* TextFieldIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14A4AD2736176600D32C64 /* TextFieldIcon.swift */; };
@@ -28,6 +29,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3B005AFA27461C18000B5B82 /* GradientTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientTextField.swift; sourceTree = "<group>"; };
 		3B14A4A72736168D00D32C64 /* GradientText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientText.swift; sourceTree = "<group>"; };
 		3B14A4A9273616D800D32C64 /* GradientButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientButton.swift; sourceTree = "<group>"; };
 		3B14A4AD2736176600D32C64 /* TextFieldIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldIcon.swift; sourceTree = "<group>"; };
@@ -71,6 +73,7 @@
 				3BE63915273DE68900C7D511 /* SignInWithAppleButton.swift */,
 				3B83AEA9274207E500ABEA65 /* GradientProfilePictureView.swift */,
 				3BAC4CA82744CC9600764D55 /* SettingsView.swift */,
+				3B005AFA27461C18000B5B82 /* GradientTextField.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -216,6 +219,7 @@
 				3B2BCC5D2735E60B004F54E4 /* ImagePicker.swift in Sources */,
 				3BE63916273DE68A00C7D511 /* SignInWithAppleButton.swift in Sources */,
 				3B2BCC532735E42B004F54E4 /* Design_Code_Advanced.xcdatamodeld in Sources */,
+				3B005AFB27461C18000B5B82 /* GradientTextField.swift in Sources */,
 				3B2BCC472735E42A004F54E4 /* Design_Code_AdvancedApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
