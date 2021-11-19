@@ -22,7 +22,7 @@ struct GradientTextField: View {
         
         HStack(spacing: 12.0) {
             
-            TextFieldIcon(iconName: textfieldIconString, currentlyEditing: $editingTextField)
+            TextFieldIcon(iconName: textfieldIconString, currentlyEditing: $editingTextField, passedImage: .constant(nil))
                 .scaleEffect(iconBounce ? 1.2 : 1.0)
             TextField(textfieldPlaceholder, text: $textFieldString) { isEditing in
                 

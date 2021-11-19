@@ -12,6 +12,8 @@ struct TextFieldIcon: View {
     var iconName: String
     @Binding var currentlyEditing: Bool
     @State private var colorAngle: Double = 0.0
+    @Binding var passedImage: UIImage?
+     
     
     var gradient1: [Color] = [
         Color.init(red: 101/255, green: 134/255, blue: 1),
@@ -48,14 +50,25 @@ struct TextFieldIcon: View {
         .cornerRadius(12)
         .overlay(
             
+            //MARK: Force unwrapped used. Revisit later
+            
             ZStack {
                 RoundedRectangle(cornerRadius: 12)
                     .stroke(Color.white, lineWidth: 1)
                     .blendMode(.overlay)
+                if passedImage != nil {
+                    Image(uiImage: passedImage!)
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: 28, height: 28, alignment: .center)
+                        .cornerRadius(8)
+                    
+                } else {
+                    Image(systemName: iconName)
+                        .gradientForeground(colors: [Color("pink-gradient-1"), Color("pink-gradient-2")])
+                        .font(.system(size: 17, weight: .medium))
+                }
                 
-                Image(systemName: iconName)
-                    .gradientForeground(colors: [Color("pink-gradient-1"), Color("pink-gradient-2")])
-                    .font(.system(size: 17, weight: .medium))
             }
         )
         .frame(width: 36, height: 36, alignment: .center)
@@ -65,6 +78,6 @@ struct TextFieldIcon: View {
 
 struct TextFieldIcon_Previews: PreviewProvider {
     static var previews: some View {
-        TextFieldIcon(iconName: "key.fill", currentlyEditing: .constant(false))
+        TextFieldIcon(iconName: "key.fill", currentlyEditing: .constant(false), passedImage: .constant(nil))
     }
 }

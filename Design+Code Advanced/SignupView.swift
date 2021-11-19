@@ -58,7 +58,7 @@ struct SignupView: View {
                     
                     HStack(spacing: 12.0) {
                         
-                        TextFieldIcon(iconName: "envelope.open.fill", currentlyEditing: $editingEmailText)
+                        TextFieldIcon(iconName: "envelope.open.fill", currentlyEditing: $editingEmailText, passedImage: .constant(nil))
                             .scaleEffect(emailIconBounce ? 1.2 : 1.0)
                         TextField("Email", text: $email)
                             .onTapGesture {
@@ -93,7 +93,7 @@ struct SignupView: View {
                     
                     HStack(spacing: 12.0) {
                         
-                        TextFieldIcon(iconName: "key.fill", currentlyEditing: $editingPasswordText)
+                        TextFieldIcon(iconName: "key.fill", currentlyEditing: $editingPasswordText, passedImage: .constant(nil))
                             .scaleEffect(passwordIconBounce ? 1.2 : 1.0)
                         SecureField("Password", text: $password)
                             .onTapGesture {
