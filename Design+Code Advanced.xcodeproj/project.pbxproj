@@ -26,6 +26,7 @@
 		3BAC4CA92744CC9600764D55 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAC4CA82744CC9600764D55 /* SettingsView.swift */; };
 		3BE63916273DE68A00C7D511 /* SignInWithAppleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE63915273DE68900C7D511 /* SignInWithAppleButton.swift */; };
 		3BE63919273DFBE600C7D511 /* SignInWithAppleObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE63918273DFBE600C7D511 /* SignInWithAppleObject.swift */; };
+		3BF9E0E12748CD8C00CFF210 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BF9E0E02748CD8C00CFF210 /* CloudKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,8 @@
 		3BE63915273DE68900C7D511 /* SignInWithAppleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithAppleButton.swift; sourceTree = "<group>"; };
 		3BE63917273DFBBA00C7D511 /* Design+Code Advanced.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Design+Code Advanced.entitlements"; sourceTree = "<group>"; };
 		3BE63918273DFBE600C7D511 /* SignInWithAppleObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithAppleObject.swift; sourceTree = "<group>"; };
+		3BF9E0E02748CD8C00CFF210 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		3BF9E0E22748CDD600CFF210 /* Design-Code-Advanced-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Design-Code-Advanced-Info.plist"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +60,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B3E7A462738AD3500D99BBB /* FirebaseAuth in Frameworks */,
+				3BF9E0E12748CD8C00CFF210 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +87,7 @@
 			children = (
 				3B2BCC452735E42A004F54E4 /* Design+Code Advanced */,
 				3B2BCC442735E42A004F54E4 /* Products */,
+				3BF9E0DF2748CD8C00CFF210 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,6 +102,7 @@
 		3B2BCC452735E42A004F54E4 /* Design+Code Advanced */ = {
 			isa = PBXGroup;
 			children = (
+				3BF9E0E22748CDD600CFF210 /* Design-Code-Advanced-Info.plist */,
 				3BE63917273DFBBA00C7D511 /* Design+Code Advanced.entitlements */,
 				3B14A4A62736167600D32C64 /* Views */,
 				3B2BCC592735E60B004F54E4 /* Helpers */,
@@ -127,6 +133,14 @@
 				3BE63918273DFBE600C7D511 /* SignInWithAppleObject.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		3BF9E0DF2748CD8C00CFF210 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3BF9E0E02748CD8C00CFF210 /* CloudKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -355,6 +369,7 @@
 				DEVELOPMENT_TEAM = T36TC3XHYJ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Design-Code-Advanced-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -387,6 +402,7 @@
 				DEVELOPMENT_TEAM = T36TC3XHYJ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Design-Code-Advanced-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
